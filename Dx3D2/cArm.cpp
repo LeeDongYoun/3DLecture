@@ -26,103 +26,103 @@ void cArm::Setup(D3DXMATRIX * pmat, D3DXVECTOR3 pos, bool right)
 
 	//========================菊 012/023
 	if (right) {
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.0625, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.0625, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.0625, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.0625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.125, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.0625, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.125, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.0625, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.125, 1)));
 	}
 	else if (!right) {
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.125, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.125, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.0625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.0625, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.125, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.0625, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.0625, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.0625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.0625, 1)));
 	}
 	if (right) {
 		//=============第465/476
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.875, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.875, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.875, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.875, 0.625)));
 	}
 	else if (!right) {
 		//=============第465/476
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.875, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.875, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
 
 	}
 	if (right) {
 		//==================谅451/410
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.6875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.6875, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.6875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.6875, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.625, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.6875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.625, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.625, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.6875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.625, 1)));
 
 		//===================快326/367
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.75, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.75, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.75, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.75, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.75, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.75, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 1)));
 	}
 	else if (!right) {
 
 		//==================谅451/410
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.75, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.75, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0), D3DXVECTOR2(0.8125, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0), D3DXVECTOR2(0.8125, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.), D3DXVECTOR2(0.8125, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0), D3DXVECTOR2(0.8125, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.), D3DXVECTOR2(0.8125, 1)));
 
 		//===================快326/367
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.6875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.6875, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.6875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.6875, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.625, 0.625)));
 
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.6875, 1)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.625, 0.625)));
-		m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.625, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.6875, 1)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.625, 0.625)));
+		m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.625, 1)));
 
 	}
 
 	//======================困156/162
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.6875, 0.625)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.6875, 0.5)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.6875, 0.625)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.6875, 0.5)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
 
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.6875, 0.625)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.75, 0.625)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.6875, 0.625)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, 1.0f, -1.0f), D3DXVECTOR2(0.75, 0.625)));
 
 
 	//================酒贰403/437
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.75, 0.625)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.8125, 0.625)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.75, 0.625)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.8125, 0.625)));
 
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.8125, 0.625)));
-	m_vecVertex.push_back(ST_PN_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.5)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.75, 0.5)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.8125, 0.625)));
+	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(1.0f, -1.0f, 1.0f), D3DXVECTOR2(0.8125, 0.5)));
 
 	if (pmat)
 	{
@@ -340,9 +340,9 @@ void cArm::Render(D3DXMATRIX* body)
 
 	g_pD3DDevice->SetTexture(0, m_pTexture);
 	g_pD3DDevice->SetTransform(D3DTS_WORLD, &matWorld);
-	g_pD3DDevice->SetFVF(ST_PN_VERTEX::FVF);
+	g_pD3DDevice->SetFVF(ST_PNT_VERTEX::FVF);
 	g_pD3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLELIST,
 		m_vecVertex.size() / 3,
 		&m_vecVertex[0],
-		sizeof(ST_PN_VERTEX));
+		sizeof(ST_PNT_VERTEX));
 }

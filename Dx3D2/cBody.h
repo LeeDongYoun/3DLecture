@@ -12,7 +12,7 @@ enum action {
 class cBody
 {
 private:
-	vector<ST_PN_VERTEX>	m_vecVertex;
+	vector<ST_PNT_VERTEX>	m_vecVertex;
 	D3DXVECTOR3				m_vPos;
 	D3DXVECTOR3				m_vDir;
 	LPDIRECT3DTEXTURE9		m_pTexture;

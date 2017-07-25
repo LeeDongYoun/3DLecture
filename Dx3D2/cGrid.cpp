@@ -54,29 +54,30 @@ void cGrid::Setup( int nNumLine /*= 20*/, float fInterval /*= 1.0f*/ )
 	m_vecVertex.push_back(ST_PC_VERTEX(D3DXVECTOR3( 0, 0, fMax), c));
 
 	D3DXMATRIX matS, matR, mat;
-	D3DXMatrixScaling(&matS, 0.1f, 2.0f, 0.1f);
+	D3DXMatrixScaling(&matS, 0.4f, 2.0f, 0.4f);
 	
 	cPyramid* pPyramid = new cPyramid;
 	D3DXMatrixRotationZ(&matR, D3DX_PI / 2.0f);
 	mat = matS * matR;
-	pPyramid->Setup(&mat, D3DCOLOR_XRGB(255, 0, 0));
+	pPyramid->Setup(&mat,1);//레드
 	m_vecPyramid.push_back(pPyramid);
 
 	pPyramid = new cPyramid;
 	D3DXMatrixRotationZ(&matR, D3DX_PI);
 	mat = matS * matR;
-	pPyramid->Setup(&mat, D3DCOLOR_XRGB(0, 255, 0));
+	pPyramid->Setup(&mat,2);//그린
 	m_vecPyramid.push_back(pPyramid);
 
 	pPyramid = new cPyramid;
 	D3DXMatrixRotationX(&matR, -D3DX_PI / 2.0f);
 	mat = matS * matR;
-	pPyramid->Setup(&mat, D3DCOLOR_XRGB(0, 0, 255));
+	pPyramid->Setup(&mat,3);//블루
 	m_vecPyramid.push_back(pPyramid);
 }
 
 void cGrid::Render()
 {
+	g_pD3DDevice->SetRenderState(D3DRS_LIGHTING, false);
 	D3DXMATRIX matWorld;
 	D3DXMatrixIdentity(&matWorld);
 	g_pD3DDevice->SetTransform(D3DTS_WORLD, &matWorld);
@@ -85,6 +86,7 @@ void cGrid::Render()
 		m_vecVertex.size() / 2,
 		&m_vecVertex[0],
 		sizeof(ST_PC_VERTEX));
+	g_pD3DDevice->SetRenderState(D3DRS_LIGHTING, true);
 
 	for each(auto p in m_vecPyramid)
 	{

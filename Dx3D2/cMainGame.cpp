@@ -156,10 +156,7 @@ void cMainGame::Render()
 
 	g_pD3DDevice->BeginScene();
 	// 그림을 그린다.
-	g_pD3DDevice->SetRenderState(D3DRS_LIGHTING, false);
 	if(m_pGrid) m_pGrid->Render();
-	g_pD3DDevice->SetLight(0, &_light);
-	g_pD3DDevice->SetRenderState(D3DRS_LIGHTING, true);
 	if (m_pCube->getDestroy() == false) {
 		if (m_pCube) m_pCube->Render();
 	}

@@ -2,7 +2,7 @@
 class cHead
 {
 private:
-	vector<ST_PN_VERTEX>	m_vecVertex;
+	vector<ST_PNT_VERTEX>	m_vecVertex;
 	D3DXVECTOR3				m_vPos;
 	LPDIRECT3DTEXTURE9		m_pTexture;
 	float m_fAngle;
