@@ -27,6 +27,7 @@ public:
 	void Update(int direction);
 	void Render(D3DXMATRIX* body);
 
+
 	void setDirection(int direction) { _direction = direction; }
 
 };
