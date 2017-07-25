@@ -80,6 +80,18 @@ struct ST_PT_VERTEX
 	enum { FVF = D3DFVF_XYZ | D3DFVF_TEX1 };
 };
 
+struct ST_PN_VERTEX
+{
+	D3DXVECTOR3 p;
+	D3DXVECTOR3 np;
+	D3DXVECTOR2	t;
+
+	ST_PN_VERTEX() : p(0, 0, 0), np(0, 0, 0), t(0, 0) {}
+	ST_PN_VERTEX(D3DXVECTOR3 _p, D3DXVECTOR2 _t) : p(_p), t(_t), np(0,0,0) {}
+	ST_PN_VERTEX(D3DXVECTOR3 _p, D3DXVECTOR2 _t, D3DXVECTOR3 _np) : p(_p), t(_t), np(_np) {}
+
+	enum { FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1};
+};
 
 
 #define SYNTHESIZE(varType, varName, funName)\
