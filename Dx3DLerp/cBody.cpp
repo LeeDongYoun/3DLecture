@@ -10,6 +10,7 @@ cBody::cBody()
 	, m_fSpeed(0.1f)
 	, _act(idle)
 	, _attack(false)
+	, m_dDir(0, 0, 1)
 {
 }
 
@@ -22,7 +23,7 @@ cBody::~cBody()
 void cBody::Setup( D3DXVECTOR3 pos)
 {
 	m_vPos = pos;
-	_act = idle;
+	_act = walk;
 	D3DXCreateTextureFromFile(g_pD3DDevice,
 		"Iron_Man_Skin.png",
 		&m_pTexture);
@@ -115,7 +116,7 @@ void cBody::Setup( D3DXVECTOR3 pos)
 
 void cBody::Update()
 {
-	static int count = 0;
+	/*static int count = 0;
 	static int _timeAttack=0;
 
 	if (count >= 130&& _act != attack) {
@@ -127,48 +128,48 @@ void cBody::Update()
 	}
 
 	if (_act != attack) {
-		count++;
+		count++;*/
 
-		if (GetKeyState('W') & 0x8000)
-		{
-			m_dDir = D3DXVECTOR3(0, 0, 0.2);
-			D3DXVec3TransformNormal(&m_dDir, &m_dDir, &m_matWorld);
-			m_vPos = m_vPos - m_dDir;
-			m_matWorld(3, 0) = m_vPos.x;
-			m_matWorld(3, 1) = m_vPos.y;
-			m_matWorld(3, 2) = m_vPos.z;
-			_act = walk;
-			count = 0;
-		}
+		//if (GetKeyState('W') & 0x8000)
+		//{
+		//	m_dDir = D3DXVECTOR3(0, 0, 0.5);
+		//	D3DXVec3TransformNormal(&m_dDir, &m_dDir, &m_matWorld);
+		//	m_vPos = m_vPos - m_dDir;
+		//	m_matWorld(3, 0) = m_vPos.x;
+		//	m_matWorld(3, 1) = m_vPos.y;
+		//	m_matWorld(3, 2) = m_vPos.z;
+		//	_act = walk;
+		//	//count = 0;
+		//}
 
-		if (GetKeyState('S') & 0x8000)
-		{
-			m_dDir = D3DXVECTOR3(0, 0, 0.2);
-			D3DXVec3TransformNormal(&m_dDir, &m_dDir, &m_matWorld);
-			m_vPos = m_vPos + m_dDir;
-			m_matWorld(3, 0) = m_vPos.x;
-			m_matWorld(3, 1) = m_vPos.y;
-			m_matWorld(3, 2) = m_vPos.z;
-			_act = walk;
-			count = 0;
-		}
+		//if (GetKeyState('S') & 0x8000)
+		//{
+		//	m_dDir = D3DXVECTOR3(0, 0, 0.5);
+		//	D3DXVec3TransformNormal(&m_dDir, &m_dDir, &m_matWorld);
+		//	m_vPos = m_vPos + m_dDir;
+		//	m_matWorld(3, 0) = m_vPos.x;
+		//	m_matWorld(3, 1) = m_vPos.y;
+		//	m_matWorld(3, 2) = m_vPos.z;
+		//	_act = walk;
+		//	//count = 0;
+		//}
 
-		if (GetKeyState('A') & 0x8000)
-		{
-			_rotaionY -= 0.05f;
-			_act = walk;
-			count = 0;	
-		}
+		//if (GetKeyState('A') & 0x8000)
+		//{
+		//	_rotaionY -= 0.05f;
+		//	_act = walk;
+		//	//count = 0;	
+		//}
 
-		if (GetKeyState('D') & 0x8000)
-		{
-			_rotaionY += 0.05f;
-			_act = walk;
-			count = 0;
-		}
-	}
+		//if (GetKeyState('D') & 0x8000)
+		//{
+		//	_rotaionY += 0.05f;
+		//	_act = walk;
+		//	//count = 0;
+		//}
+	
 
-	if (_act == idle || _act == idleAni) {
+	/*if (_act == idle || _act == idleAni) {
 		if (GetKeyState(VK_SPACE) & 0x8000)
 		{
 			_act = attack;
@@ -179,13 +180,13 @@ void cBody::Update()
 
 		_timeAttack++;
 		 if (_timeAttack >= 100) {
-			 //_act = damagetime;
+			 _act = damagetime;
 			_attack = false;
 			_timeAttack = 0;
 			count = 0;
 			_act = idle;
-		}
-	}
+		}*/
+	
 }
 
 void cBody::Render()
@@ -195,21 +196,21 @@ void cBody::Render()
 	g_pD3DDevice->SetRenderState(D3DRS_NORMALIZENORMALS, true);
 
 	D3DXMATRIX matS;
-	D3DXMatrixScaling(&matS, 1, 1, 0.5);
+	D3DXMatrixScaling(&matS, 0.5, 0.5, 0.25);
 
 	D3DXMATRIX matRX;
-	D3DXMatrixRotationY(&matRX, _rotaionY);
+	D3DXMatrixRotationX(&matRX, _rotaionX);
 
 	D3DXMATRIX matRY;
 	D3DXMatrixRotationY(&matRY, _rotaionY);
 
 	D3DXMATRIX matRZ;
-	D3DXMatrixRotationY(&matRZ, _rotaionY);
+	D3DXMatrixRotationZ(&matRZ, _rotaionZ);
 
 	D3DXMATRIX matT;
 	D3DXMatrixTranslation(&matT, m_vPos.x, m_vPos.y, m_vPos.z);
-	m_pMatworld= matRX*matRY*matRZ * matT;
-	m_matWorld = matS*matRX*matRY*matRZ * matT;
+	m_pMatworld= matRY*matRX*matRZ * matT;
+	m_matWorld = matS*matRY*matRX*matRZ * matT;
 	g_pD3DDevice->SetTexture(0, m_pTexture);
 	g_pD3DDevice->SetTransform(D3DTS_WORLD, &m_matWorld);
 	g_pD3DDevice->SetFVF(ST_PNT_VERTEX::FVF);
@@ -238,4 +239,26 @@ action cBody::getAction()
 D3DXVECTOR3 * cBody::getDirection()
 {
 	return &m_dDir;
+}
+
+void cBody::setBodyDir(D3DXVECTOR3 dir)
+{
+	D3DXVec3Normalize(&dir, &dir);
+	D3DXVec3Normalize(&m_dDir, &m_dDir);
+
+	D3DXVECTOR3 cross;
+	D3DXVec3Cross(&cross,&m_dDir, &dir);
+
+	float standard=D3DXVec3Dot(&cross, &D3DXVECTOR3(0.0f, 1.0f, 0.0f));
+	float currentAngle = D3DXVec3Dot(&dir, &m_dDir);
+	float _angle= acos(D3DXVec3Dot(&dir, &m_dDir));
+	if (standard >= 0&& currentAngle !=0) {
+		_rotaionY += _angle;
+	}
+	else
+	{
+		_rotaionY -= _angle;
+	}
+	
+	m_dDir = dir;
 }

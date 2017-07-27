@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dx3D", "Dx3D\Dx3D.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dx3D2", "Dx3D2\Dx3D2.vcxproj", "{76BE18A2-5FE2-4A24-97BF-EF9845C2CC17}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dx3D2Map", "Dx3DMap\Dx3D2Map.vcxproj", "{8E898E4B-642C-4391-9BEC-DD7BDE77E773}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dx3DLerp", "Dx3DLerp\Dx3DLerp.vcxproj", "{66355764-ED80-40D6-BB94-8A2B5729F460}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +25,14 @@ Global
 		{76BE18A2-5FE2-4A24-97BF-EF9845C2CC17}.Debug|Win32.Build.0 = Debug|Win32
 		{76BE18A2-5FE2-4A24-97BF-EF9845C2CC17}.Release|Win32.ActiveCfg = Release|Win32
 		{76BE18A2-5FE2-4A24-97BF-EF9845C2CC17}.Release|Win32.Build.0 = Release|Win32
+		{8E898E4B-642C-4391-9BEC-DD7BDE77E773}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E898E4B-642C-4391-9BEC-DD7BDE77E773}.Debug|Win32.Build.0 = Debug|Win32
+		{8E898E4B-642C-4391-9BEC-DD7BDE77E773}.Release|Win32.ActiveCfg = Release|Win32
+		{8E898E4B-642C-4391-9BEC-DD7BDE77E773}.Release|Win32.Build.0 = Release|Win32
+		{66355764-ED80-40D6-BB94-8A2B5729F460}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66355764-ED80-40D6-BB94-8A2B5729F460}.Debug|Win32.Build.0 = Debug|Win32
+		{66355764-ED80-40D6-BB94-8A2B5729F460}.Release|Win32.ActiveCfg = Release|Win32
+		{66355764-ED80-40D6-BB94-8A2B5729F460}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

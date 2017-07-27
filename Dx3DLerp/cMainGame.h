@@ -1,32 +1,46 @@
 #pragma once
 
+
 class cGrid;
-class cCube;
 class cCamera;
 class cHead;
 class cBody;
 class cArm;
 class cLeg;
-class cBst;
+class cHexagon;
+class cBezier;
 
 class cMainGame
 {
 private:
-	//cCube*		m_pTestCube[10];
+	
 	cGrid*		m_pGrid;
-	cCube*		m_pCube;
 	cCamera*	m_pCamera;
-	cHead* m_pHead;
+	//캐릭터1
 	cBody* m_pBody;
+	cHead* m_pHead;
 	cArm* m_pLArm;
 	cArm* m_pRArm;
 	cLeg* m_pLLeg;
 	cLeg* m_pRLeg;
-	cBst* m_pBst;
+	cHexagon* m_pHexagon;
 
 	D3DLIGHT9 _light;
 
-	float time;
+	vector<ST_PC_VERTEX> m_hexaPos;
+
+	//캐릭터2
+	cBody* m_pBody2;
+	cHead* m_pHead2;
+	cArm* m_pLArm2;
+	cArm* m_pRArm2;
+	cLeg* m_pLLeg2;
+	cLeg* m_pRLeg2;
+
+	cBezier* m_pBezier[3];
+
+	float _time;
+	float _bTime;
 	
 public:
 	cMainGame(void);

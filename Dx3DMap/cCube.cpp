@@ -16,12 +16,11 @@ cCube::cCube(void)
 
 cCube::~cCube(void)
 {
-	//SAFE_RELEASE(m_pTexture);
 }
 
 void cCube::Setup()
 {
-	D3DXCreateTextureFromFile(g_pD3DDevice,
+	/*D3DXCreateTextureFromFile(g_pD3DDevice,
 		"box.png",
 		&m_pTexture[0]);
 	D3DXCreateTextureFromFile(g_pD3DDevice,
@@ -32,7 +31,7 @@ void cCube::Setup()
 		&m_pTexture[2]);
 	D3DXCreateTextureFromFile(g_pD3DDevice,
 		"boxD3.png",
-		&m_pTexture[3]);
+		&m_pTexture[3]);*/
 
 	srand(time(NULL));
 	m_vPos.x = (rand() % 30) - 15;

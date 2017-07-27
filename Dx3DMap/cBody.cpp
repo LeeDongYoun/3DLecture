@@ -16,16 +16,15 @@ cBody::cBody()
 
 cBody::~cBody()
 {
-	SAFE_RELEASE(m_pTexture);
 }
 
 void cBody::Setup( D3DXVECTOR3 pos)
 {
 	m_vPos = pos;
 	_act = idle;
-	D3DXCreateTextureFromFile(g_pD3DDevice,
+	/*D3DXCreateTextureFromFile(g_pD3DDevice,
 		"Iron_Man_Skin.png",
-		&m_pTexture);
+		&m_pTexture);*/
 
 	//========================¾Õ 012/023
 	m_vecVertex.push_back(ST_PNT_VERTEX(D3DXVECTOR3(-1.0f, -1.0f, -1.0f), D3DXVECTOR2(0.3125, 1)));

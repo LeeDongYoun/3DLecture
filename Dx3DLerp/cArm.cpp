@@ -138,7 +138,7 @@ void cArm::Setup(D3DXMATRIX * pmat, D3DXVECTOR3 pos, bool right)
 		}
 	}
 	for (size_t i = 0; i < m_vecVertex.size(); ++i) {
-		m_vecVertex[i].p.y -= 1.0f;
+		m_vecVertex[i].p.y -= 0.5f;
 	}
 
 	for (size_t i = 0; i < m_vecVertex.size(); i += 3) {

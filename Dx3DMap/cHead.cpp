@@ -13,16 +13,15 @@ cHead::cHead()
 
 cHead::~cHead()
 {
-	SAFE_RELEASE(m_pTexture);
 }
 
 void cHead::Setup(D3DXMATRIX * pmat, D3DXVECTOR3 pos)
 {
 	m_vPos = pos;
 
-	D3DXCreateTextureFromFile(g_pD3DDevice,
-		"Iron_Man_Skin.png",
-		&m_pTexture);
+	//D3DXCreateTextureFromFile(g_pD3DDevice,
+	//	"Iron_Man_Skin.png",
+	//	&m_pTexture);
 
 	/*vector<ST_PT_VERTEX> m_vecVertex;
 	vector<DWORD>		vecIndex;

@@ -14,16 +14,15 @@ cArm::cArm()
 
 cArm::~cArm()
 {
-	SAFE_RELEASE(m_pTexture);
 }
 
 void cArm::Setup(D3DXMATRIX * pmat, D3DXVECTOR3 pos, bool right)
 {
 	m_vPos = pos;
 	_right = right;
-	D3DXCreateTextureFromFile(g_pD3DDevice,
+	/*D3DXCreateTextureFromFile(g_pD3DDevice,
 		"Iron_Man_Skin.png",
-		&m_pTexture);
+		&m_pTexture);*/
 
 	//========================¾Õ 012/023
 	if (right) {
